@@ -1,7 +1,11 @@
 <template>
-    <div>
+    <div class="defiler">
+        <h1>New release</h1>
+        <br>
         <carousel>
-            <carouselSlide v-for="(item,i) in itemsSecond" :it="item" :key="i" :index="i"></carouselSlide>
+            <v-layout align-center justify-start row fill-height>
+                <carouselSlide v-for="(item,i) in itemsSecond" :it="item" :key="i" :index="i"></carouselSlide>
+            </v-layout>
         </carousel>
     </div>
 </template>
@@ -18,7 +22,7 @@ export default {
     },
 
     props:{
-        items:{type:Array}
+        items: {type:Array}
     },
 
     mounted (){
@@ -29,5 +33,7 @@ export default {
 </script>
 
 <style>
-
+.defiler {
+    vertical-align: middle;
+}
 </style>
